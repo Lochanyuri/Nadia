@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js"></script>
+  <title>html</title>
+</head>
+<style>
+  
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: Sans-Serif;
+}
+body{
+  background: #e6e6e6d0;
+}
+.account_container{
+  background: #df4f0e;
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+ color: white;
+ padding: 5px;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.account_container img{
+ width: 10%;
+
+}
+.account_container  .accountbox1 > img{
+ width: 10%;
+ 
+}
+.account_container  .accountbox1{
+  display: flex;
+  align-items: center;
+  gap:9px;
+}
+.accountfirstbox{
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accountfirstbox > input{
+  background: #f59819;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+.accountbox{
+  border-bottom: 1px solid black;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 19px
+}
+.accountsecondbox .accountbox > img{
+  width: 10%;
+}
+.accountsecondbox .accountbox:hover{
+  background: #dfdcdc;
+  color: black;
+}
+.accountBox5{
+  border: none;
+}
+.accountBox6{
+  margin-top: 15px;
+  border: none;
+  display: flex;
+  gap: 10px
+}
+.accountBox6 input{
+  padding: 15px;
+}
+.accountBox6 .accountbox:hover{
+  background: white;
+}
+.accountthreedotcontant{
+  background: #ffffff;
+  width: 40%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: fixed;
+  top: 45px;
+  right: 10px;
+  display: none;
+}
+#threeDots:hover{
+  background: hsla(323.2,0%,98.6%,0.191);
+}
+.accountthreedotcontant div{
+  padding: 10px;
+}
+.accountthreedotcontant div:hover{
+  background: orange;
+  color: white;
+}
+#hoverbox:hover{
+  background: hsla(323.2,78.5%,27.1%,0.191);
+  color: black;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+</style>
+<body>
+	  <div class="account_container">
+		    <a href="index.html"><div class="accountbox1">
+  <img  class="backBtn" id="hoverbox" src="Images/Images/Polish_20230711_175507133.png">
+	    <h4>My Account</h4>
+	    </div></a>
+	    <img id="threeDots" src="Images/Images/Polish_20230711_180614266.png">
+	  </div>
+	  <div class="accountfirstbox">
+	    <p>Hello,welcome to darz...</p>
+	    <input id="hoverbox"  type="button" value="Login/SignUp">
+	  </div>
+	  <div class="accountsecondbox">
+	  <div class="accountBox1 accountbox"><img src="Images/order-order-2.png"><p>My Orders</p></div>
+	  <div class="accountBox2 accountbox"><img src="Images/heart-103.png"><p>My whishlit & followed stores</p></div>
+	  <div class="accountBox3 accountbox"><img src="Images/policies-and-regulations-2.png"><p>policies</p></div>
+	  <div class="accountBox4 accountbox"><img src="Images/help-center-1.png"><p>Help Center</p></div>
+	  <div class="accountBox5 accountbox"><img src="Images/chat-106.png"><p>Chat with us</p></div>
+	  <div class="accountBox6 accountbox"><p>I want to receive exclusive offers and promotions from daraz</p>
+<input type="checkbox" id="true">
+</div>
+<div class="accountthreedotcontant">
+  <div class="login">login</div>
+  <div class="login">Home</div>
+  <div class="login">Categories</div>
+  <div class="login">My account</div>
+  <div class="login">My orders</div>
+  <div class="login">My whishlit</div>
+  <div class="login">Need Help?</div>
+</div>
+	  </div>
+	 
+	  
+</body>
+<script>
+  const threeDots = document.getElementById("threeDots");
+  const allaccounts = document.querySelector(".accountthreedotcontant");
+  
+ threeDots.addEventListener("click", () => {
+    if(allaccounts.style.display == "none"){
+      allaccounts.style.display ="block"
+    }
+    else{
+      allaccounts.style.display ="none"
+    }
+  })
+  
+</script>
+</html>

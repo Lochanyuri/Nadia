@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js"></script>
+  <title>html</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  body{
+    background: #dddddd;
+  }
+  .headerSearchBox{
+    background: hsl(36.8,100%,56.6%);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: fixed;
+    top: 0px;
+    z-index: 1111;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .headerSearchBox a{
+    width: 10%;
+  }
+#searchProductsName {
+  padding: 5px;
+  width: 70%;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+}
+#searchProductsName::placeholder{
+  color: #d3d3d3;
+}
+
+  #searchProductsBtn{
+    padding: 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    
+  }
+  .emtybox{
+    margin: 50% 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+    
+  }
+  .emtybox h2{
+    text-align: center;
+    position: relative;
+    color: black;
+    z-index: 2;
+    background: white;
+    padding: 5px
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .box{
+    background: white;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: absolute;
+    top: 120px;
+  }
+ .Btnbox{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+ }
+  .Btnbox #oksearchBtn{
+   width: 80%;
+    padding: 5px;
+    margin: 5px auto;
+  }
+  .searchPopUpBox{
+    background: #e7e7e7;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 85%;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: 0.9s;
+    
+  }
+  .searchPopUpBox{
+    position: fixed;
+    top: -1220px;
+    left: 28px;
+    z-index: 255522;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    transition: 0.9s;
+  }
+ 
+  
+</style>
+<body>
+  <div class="headerSearchBox">
+    <a href="index.html"><img style="margin:5px;" width="100%" src="Png/Polish_20230711_175507133.png"></a>
+    <input id="searchProductsName" type="search" placeholder="Search Here">
+    <button id="searchProductsBtn">Search</button>
+  </div>
+<div class="emtybox">
+  <img style="z-index: 2;" width="90%" src="png/404.png">
+  <h2>Empty box</h2>
+  <div class="box"></div>
+</div>
+
+<div class="searchPopUpBox">
+  <p style="font-family: 'Montserrat', sans-serif;">Sorry, We are not completely bulid the functionality and the results you want.</p>
+  <div class="Btnbox">
+    <input id="oksearchBtn" type="button" value="ok">
+  </div>
+  </div>
+</body>
+<script>
+const searchinput =document.getElementById("searchProductsName");
+  const searchBtn = document.getElementById("searchProductsBtn");
+  const emtybox = document.querySelector(".emtybox");
+ const searchPopUpBox = document.querySelector(".searchPopUpBox")
+ const oksearchBtn = document.getElementById("oksearchBtn");
+  
+  searchBtn.addEventListener("click", show)
+  
+  function show(){
+    let value = searchinput.value;
+    if(value === ""){
+      alert("please write something on input")
+    }
+    else{
+     emtybox.style.display = "flex";
+     setTimeout(() => {
+       searchPopUpBox.style.top = "90px";
+     },2000)
+    }
+    oksearchBtn.addEventListener("click", () => {
+      searchPopUpBox.style.top = "-1200px";
+    })
+  }
+  
+</script>
+</html>
